@@ -87,11 +87,9 @@ jobs:
           shared-key: cargo-test
           cache-on-failure: true
 
-      - name: Install nextest
-        uses: taiki-e/install-action@nextest
       - name: Run cargo test
         run: |
-          cargo nextest run --all --features tracing/max_level_off
+          cargo test --all --features tracing/max_level_off
 
   # check-spelling:
   #   name: Cargo test
